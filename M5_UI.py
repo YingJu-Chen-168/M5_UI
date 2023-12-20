@@ -28,9 +28,6 @@ profile = pipeline.start(config)
 align_to = rs.stream.color
 align = rs.align(align_to)
 
-model_directory = 'yolov8m.pt'      #os.environ['HOME'] + '/yolov8_rs/yolov8m.pt'
-model = YOLO(model_directory)
-
 run = st.checkbox('Run')
 FRAME_WINDOW = st.image([])
 
