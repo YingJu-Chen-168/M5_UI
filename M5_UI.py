@@ -1,5 +1,4 @@
 import streamlit as st
-import cv2
 import sys
 import os
 import time
@@ -41,8 +40,6 @@ while run:
         continue
 
     color_image = np.asanyarray(color_frame.get_data())
-    depth_image = np.asanyarray(depth_frame.get_data())
-    depth_colormap = cv2.applyColorMap(cv2.convertScaleAbs(depth_image, alpha=0.08), cv2.COLORMAP_JET)
 
     FRAME_WINDOW.image(color_image)
 else:
